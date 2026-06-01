@@ -3,14 +3,19 @@ mod crawler;
 mod models;
 mod output;
 
-use crate::models::Page;
+use crate::{cli::Input, crawler::crawl, output::save};
 
-fn main() {
-    let x: usize = 5;
-    let y = soma(x);
-    println!("{}", x);
-}
+#[tokio::main]
+async fn main() {
+    let args = Input::parse_args();
 
-fn soma(x: usize) -> usize {
-    x + 1
+    let pages = crawl(&args.url, args.depth, args.simultaneous_requests).await;
+
+    match pages {
+        Ok(pages) => match save(pages, args.output) {
+            Ok(_) => println!("Crawling completed and results saved successfully."),
+            Err(e) => eprintln!("Error saving results: {}", e),
+        },
+        Err(e) => eprintln!("Error during crawling: {}", e),
+    }
 }
