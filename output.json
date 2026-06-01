@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://example.com",
+    "title": "Example Domain",
+    "links": [
+      "https://iana.org/domains/example"
+    ]
+  },
+  {
+    "url": "https://iana.org/domains/example",
+    "title": "No Title",
+    "links": []
+  }
+]
