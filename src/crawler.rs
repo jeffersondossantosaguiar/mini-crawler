@@ -15,6 +15,8 @@ pub async fn crawl(
     let results: Arc<Mutex<Vec<Page>>> = Arc::new(Mutex::new(vec![]));
     let semaphore = Arc::new(Semaphore::new(simultaneous_requests));
 
+    let mut handles = vec![];
+
     loop {
         let url = {
             let mut queue_lock = queue.lock().await;
@@ -22,7 +24,11 @@ pub async fn crawl(
         };
 
         if url.is_none() {
-            break;
+            if semaphore.available_permits() == simultaneous_requests {
+                break;
+            }
+            tokio::time::sleep(tokio::time::Duration::from_millis(10)).await;
+            continue;
         }
 
         if let Some((url, current_depth)) = url {
@@ -41,7 +47,7 @@ pub async fn crawl(
 
             let permit = semaphore_clone.acquire_owned().await?;
 
-            tokio::spawn(async move {
+            handles.push(tokio::spawn(async move {
                 if let Err(e) = process_url(
                     &url,
                     current_depth,
@@ -54,7 +60,7 @@ pub async fn crawl(
                     eprintln!("Error processing {}: {}", url, e);
                 }
                 drop(permit);
-            });
+            }));
         };
     }
 
