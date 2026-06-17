@@ -1,6 +1,6 @@
 use crate::models::Page;
 
-use reqwest::get;
+use reqwest::Client;
 use scraper::{Html, Selector};
 use std::{error::Error, sync::Arc};
 use tokio::sync::{Mutex, Semaphore};
@@ -10,6 +10,8 @@ pub async fn crawl(
     max_depth: usize,
     simultaneous_requests: usize,
 ) -> Result<Vec<Page>, Box<dyn Error>> {
+    let client = Client::builder().user_agent("MiniCrawler").build()?;
+
     let queue: Arc<Mutex<Vec<(String, usize)>>> = Arc::new(Mutex::new(vec![(url.to_string(), 0)]));
     let visited: Arc<Mutex<Vec<String>>> = Arc::new(Mutex::new(vec![]));
     let results: Arc<Mutex<Vec<Page>>> = Arc::new(Mutex::new(vec![]));
@@ -40,6 +42,8 @@ pub async fn crawl(
                 continue;
             }
 
+            let client_clone = client.clone();
+
             let queue_clone = Arc::clone(&queue);
             let visited_clone = Arc::clone(&visited);
             let results_clone = Arc::clone(&results);
@@ -54,6 +58,7 @@ pub async fn crawl(
                     queue_clone,
                     visited_clone,
                     results_clone,
+                    client_clone,
                 )
                 .await
                 {
@@ -73,8 +78,9 @@ async fn process_url(
     queue: Arc<Mutex<Vec<(String, usize)>>>,
     visited: Arc<Mutex<Vec<String>>>,
     results: Arc<Mutex<Vec<Page>>>,
+    client: Client,
 ) -> Result<(), Box<dyn Error>> {
-    let response = get(url).await?;
+    let response = client.get(url).send().await?;
     let html = response.text().await?;
 
     let links: Vec<String>;
