@@ -1,15 +1,15 @@
-use crate::models::Page;
+use crate::{error::CrawlerError, models::Page};
 
 use reqwest::Client;
 use scraper::{Html, Selector};
-use std::{error::Error, sync::Arc};
+use std::sync::Arc;
 use tokio::sync::{Mutex, Semaphore};
 
 pub async fn crawl(
     url: &str,
     max_depth: usize,
     simultaneous_requests: usize,
-) -> Result<Vec<Page>, Box<dyn Error>> {
+) -> Result<Vec<Page>, CrawlerError> {
     let client = Client::builder().user_agent("MiniCrawler").build()?;
 
     let queue: Arc<Mutex<Vec<(String, usize)>>> = Arc::new(Mutex::new(vec![(url.to_string(), 0)]));
@@ -79,7 +79,7 @@ async fn process_url(
     visited: Arc<Mutex<Vec<String>>>,
     results: Arc<Mutex<Vec<Page>>>,
     client: Client,
-) -> Result<(), Box<dyn Error>> {
+) -> Result<(), CrawlerError> {
     let response = client.get(url).send().await?;
     let html = response.text().await?;
 

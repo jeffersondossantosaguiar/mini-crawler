@@ -1,5 +1,6 @@
 mod cli;
 mod crawler;
+mod error;
 mod models;
 mod output;
 

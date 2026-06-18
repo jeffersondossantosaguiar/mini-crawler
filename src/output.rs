@@ -1,15 +1,17 @@
-use std::{fs::write, io};
+use csv::Writer;
+use serde_json::to_string_pretty;
+use std::fs::write;
 
-use crate::{cli::OutputFormat, models::Page};
+use crate::{cli::OutputFormat, error::CrawlerError, models::Page};
 
-pub fn save(pages: Vec<Page>, format: OutputFormat) -> Result<(), io::Error> {
+pub fn save(pages: Vec<Page>, format: OutputFormat) -> Result<(), CrawlerError> {
     match format {
         OutputFormat::Json => {
-            let json = serde_json::to_string_pretty(&pages)?;
+            let json = to_string_pretty(&pages)?;
             write("output.json", json)?;
         }
         OutputFormat::Csv => {
-            let mut write = csv::Writer::from_path("output.csv")?;
+            let mut write = Writer::from_path("output.csv")?;
             write.write_record(["url", "title", "links"])?;
             for page in pages {
                 write.serialize((&page.url, &page.title, &page.links.join(";")))?;
