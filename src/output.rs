@@ -10,8 +10,9 @@ pub fn save(pages: Vec<Page>, format: OutputFormat) -> Result<(), io::Error> {
         }
         OutputFormat::Csv => {
             let mut write = csv::Writer::from_path("output.csv")?;
+            write.write_record(["url", "title", "links"])?;
             for page in pages {
-                write.serialize(page)?;
+                write.serialize((&page.url, &page.title, &page.links.join(";")))?;
             }
             write.flush()?;
         }

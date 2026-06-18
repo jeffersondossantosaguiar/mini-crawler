@@ -1,148 +1,19 @@
 [
   {
-    "url": "https://wikipedia.org",
-    "title": "Wikipedia",
+    "url": "https://example.com",
+    "title": "Example Domain",
     "links": [
-      "https://meta.wikimedia.org/wiki/Special:MyLanguage/List_of_Wikipedias",
-      "https://donate.wikimedia.org/?wmf_medium=portal&wmf_campaign=portalFooter&wmf_source=portalFooter",
-      "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications",
-      "https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3Dportal%26utm_medium%3Dbutton%26anid%3Dadmob",
-      "https://itunes.apple.com/app/apple-store/id324715238?pt=208305&ct=portal&mt=8",
-      "https://creativecommons.org/licenses/by-sa/4.0/",
-      "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use",
-      "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy"
+      "https://iana.org/domains/example"
     ]
   },
   {
-    "url": "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications",
-    "title": "Wikimedia Error",
+    "url": "https://iana.org/domains/example",
+    "title": "Example Domains",
     "links": [
-      "https://www.wikimedia.org"
-    ]
-  },
-  {
-    "url": "https://meta.wikimedia.org/wiki/Special:MyLanguage/List_of_Wikipedias",
-    "title": "Wikimedia Error",
-    "links": [
-      "https://www.wikimedia.org"
-    ]
-  },
-  {
-    "url": "https://donate.wikimedia.org/?wmf_medium=portal&wmf_campaign=portalFooter&wmf_source=portalFooter",
-    "title": "Wikimedia Error",
-    "links": [
-      "https://www.wikimedia.org"
-    ]
-  },
-  {
-    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "title": "\n      Deed - Attribution-ShareAlike 4.0 International - Creative Commons\n    ",
-    "links": [
-      "https://search.creativecommons.org",
-      "https://giving.gofundme.com/campaign/778218/donate",
-      "https://giving.gofundme.com/campaign/778218/donate",
-      "https://creativecommons.org/licenses/by-sa/4.0/",
-      "https://wiki.creativecommons.org/License_Versions#Detailed_attribution_comparison_chart",
-      "https://wiki.creativecommons.org/Best_practices_for_attribution#This_is_a_good_attribution_for_material_you_modified_slightly",
-      "https://wiki.creativecommons.org/License_Versions#Modifications_and_adaptations_must_be_marked_as_such ",
-      "https://creativecommons.org/compatiblelicenses",
-      "https://wiki.creativecommons.org/License_Versions#Application_of_effective_technological_measures_by_users_of_CC-licensed_works_prohibited",
-      "https://wiki.creativecommons.org/Considerations_for_licensors_and_licensees",
-      "https://creative-commons-shop.fourthwall.com/",
-      "https://bsky.app/profile/creativecommons.bsky.social",
-      "https://mastodon.social/@creativecommons",
-      "https://www.linkedin.com/company/creative-commons/",
-      "https://mail.creativecommons.org/subscribe",
-      "https://fontawesome.com/"
-    ]
-  },
-  {
-    "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy",
-    "title": "Wikimedia Error",
-    "links": [
-      "https://www.wikimedia.org"
-    ]
-  },
-  {
-    "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use",
-    "title": "Wikimedia Error",
-    "links": [
-      "https://www.wikimedia.org"
-    ]
-  },
-  {
-    "url": "https://itunes.apple.com/app/apple-store/id324715238?pt=208305&ct=portal&mt=8",
-    "title": "‎Wikipedia App - App Store",
-    "links": [
-      "https://apps.apple.com/us/iphone/today",
-      "https://apps.apple.com/us/ipad/today",
-      "https://apps.apple.com/us/mac/discover",
-      "https://apps.apple.com/us/vision/apps-and-games",
-      "https://apps.apple.com/us/watch/apps-and-games",
-      "https://apps.apple.com/us/tv/discover",
-      "https://apps.apple.com/us/iphone/today",
-      "https://apps.apple.com/us/iphone/games",
-      "https://apps.apple.com/us/iphone/apps",
-      "https://apps.apple.com/us/iphone/arcade",
-      "https://apps.apple.com/us/iphone/today",
-      "https://apps.apple.com/us/ipad/today",
-      "https://apps.apple.com/us/mac/discover",
-      "https://apps.apple.com/us/vision/apps-and-games",
-      "https://apps.apple.com/us/watch/apps-and-games",
-      "https://apps.apple.com/us/tv/discover",
-      "https://apps.apple.com/us/iphone/charts/6006?chart=top-free",
-      "https://apps.apple.com/us/developer/wikimedia-foundation/id324715241?platform=iphone",
-      "https://apps.apple.com/us/app/324715238?see-all=reviews&platform=iphone",
-      "https://foundation.wikimedia.org/wiki/Privacy_policy",
-      "https://apps.apple.com/us/iphone/story/id1539235847",
-      "https://apps.apple.com/us/iphone/story/id1538632801",
-      "https://foundation.wikimedia.org/wiki/Privacy_policy",
-      "https://apps.apple.com/us/iphone/story/id1538632801",
-      "https://apps.apple.com/story/id1814164299",
-      "https://apps.apple.com/us/iphone/story/id1825160725",
-      "https://m.mediawiki.org/wiki/Wikimedia_Apps/Team/iOS",
-      "https://foundation.wikimedia.org/wiki/Privacy_policy",
-      "https://apps.apple.com/us/app/324715238?see-all=customers-also-bought-apps&platform=iphone",
-      "https://apps.apple.com/us/app/dictionary-com-english-words/id308750436",
-      "https://apps.apple.com/us/app/dailyart/id547982045",
-      "https://apps.apple.com/us/app/oxford-dictionary-thesaurus/id978674211",
-      "https://apps.apple.com/us/app/merriam-webster-dictionary/id399452287",
-      "https://apps.apple.com/us/app/kiwix/id997079563",
-      "https://apps.apple.com/us/app/ted-talks-watch-and-learn/id376183339",
-      "https://apps.apple.com/us/app/nasa/id334325516",
-      "https://apps.apple.com/us/app/google-arts-culture/id1050970557",
-      "https://apps.apple.com/us/app/true-heritage-ancestry-edna/id6753166395",
-      "https://apps.apple.com/us/app/vinylsnap-scan-value-record/id6748595105",
-      "https://www.apple.com",
-      "https://www.apple.com/legal/internet-services/",
-      "https://www.apple.com/legal/privacy/data/en/app-store/",
-      "https://www.apple.com/privacy/use-of-cookies/",
-      "https://support.apple.com/billing"
-    ]
-  },
-  {
-    "url": "https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3Dportal%26utm_medium%3Dbutton%26anid%3Dadmob",
-    "title": "Wikipedia - Apps on Google Play",
-    "links": [
-      "https://policies.google.com/privacy",
-      "https://myaccount.google.com/termsofservice",
-      "https://support.google.com/googleplay?p=appgame_ratings",
-      "https://support.google.com/googleplay?p=data-safety&hl=en",
-      "https://support.google.com/googleplay?p=data-safety&hl=en",
-      "https://support.google.com/googleplay/?p=report_content",
-      "https://support.google.com/googleplay?p=appgame_ratings",
-      "http://wikimediafoundation.org",
-      "http://wikimediafoundation.org/wiki/Privacy_policy",
-      "https://support.google.com/googleplay/?p=report_content",
-      "https://play.google.com/about/giftcards",
-      "https://support.google.com/googleplay/answer/134336",
-      "https://support.google.com/googleplay?p=pff_parentguide",
-      "https://support.google.com/googleplay/answer/7007852",
-      "https://play.google.com/intl/en_br/about/play-terms.html",
-      "https://policies.google.com/privacy",
-      "https://support.google.com/googleplay/?p=about_play",
-      "http://developer.android.com/index.html",
-      "https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288"
+      "https://pti.icann.org",
+      "https://www.icann.org/",
+      "https://www.icann.org/privacy/policy",
+      "https://www.icann.org/privacy/tos"
     ]
   }
 ]
